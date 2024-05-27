@@ -1,0 +1,58 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="jumbotron">
+    <h1 class="display-4">Crop Suggestion System {{ app_data['author'] }} </h1>
+    <!-- <p>Title: {{ app_data['html_title'] }}</p> -->
+    <hr class="my-4">
+    <!-- <p>It uses utility classes for typography and spacing to space content out within the larger container.</p> -->
+    <!-- <a class="btn btn-primary btn-lg" href="/contact" role="button">Contact</a> -->
+
+    <h2>User Input</h2>
+    <br>
+
+    <p>{{ result['prediction'] }}</p>
+
+    <form action="/submit" method="post">
+      <div class="mb-3">
+          <label for="N" class="form-label"><strong>N:</strong></label>
+          <input type="number" id="N" name="N" class="form-control" required>
+      </div>
+  
+      <div class="mb-3">
+          <label for="P" class="form-label"><strong>P:</strong></label>
+          <input type="number" id="P" name="P" class="form-control" required>
+      </div>
+  
+      <div class="mb-3">
+          <label for="K" class="form-label"><strong>K:</strong></label>
+          <input type="number" id="K" name="K" class="form-control" required>
+      </div>
+  
+      <div class="mb-3">
+          <label for="temperature" class="form-label"><strong>Temperature:</strong></label>
+          <input type="number" id="temperature" name="temperature" class="form-control" required>
+      </div>
+  
+      <div class="mb-3">
+          <label for="humidity" class="form-label"><strong>Humidity:</strong></label>
+          <input type="number" id="humidity" name="humidity" class="form-control" required>
+      </div>
+  
+      <div class="mb-3">
+          <label for="ph" class="form-label"><strong>pH:</strong></label>
+          <input type="number" id="ph" name="ph" class="form-control" required>
+      </div>
+  
+      <div class="mb-3">
+          <label for="rainfall" class="form-label"><strong>Rainfall:</strong></label>
+          <input type="number" id="rainfall" name="rainfall" class="form-control" required>
+      </div>
+  
+      <button type="submit" class="btn btn-primary">Submit</button>
+  
+
+  </form>
+  
+  </div>
+{% endblock %}
